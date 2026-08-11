@@ -1,0 +1,40 @@
+Hardware Registration Report — HP Presenter
+Identification method
+The hardware in nixos-presenter was identified using a Linux hardware report, PCI device detection, and NVMe device information. The NVIDIA graphics card was additionally identified with:
+
+bash
+nix-shell -p pciutils --run "lspci -nn | grep -Ei 'VGA|3D|NVIDIA'"
+This confirmed an NVIDIA GeForce RTX 3070 (10de:2484, revision A1). The report also identified the HP EliteDesk 800 G6 Tower system, HP 870C motherboard, Intel Core i7-10700 CPU, four DDR4 RAM modules, Samsung 990 PRO with Heatsink 1 TB NVMe SSD, integrated Intel UHD Graphics 630, Intel wired Ethernet, and Intel Wi-Fi.
+
+Registered hardware
+Category	Registered part	Quantity
+Desktop computers	HP EliteDesk 800 G6 Tower PC	1
+Motherboards	HP 870C Motherboard	1
+CPUs	Intel Core i7-10700	1
+Memory	SK hynix HMA82GU6DJR8N-XN, 16 GB DDR4-3200	2
+Memory	Micron MTA16ATF2G64AZ-3G2J1, 16 GB DDR4-3200	2
+Graphics cards	NVIDIA GeForce RTX 3070, 8 GB GDDR6	1
+Integrated graphics	Intel UHD Graphics 630	1
+NVMe SSDs	Samsung SSD 990 PRO with Heatsink 1 TB	1
+Network controllers	Intel Gigabit Ethernet Controller	1
+Network controllers	Intel Wireless Network Controller	1
+Cooling	HP OEM CPU cooler	1
+Cooling	RTX 3070 integrated cooler	1
+Power supplies	HP EliteDesk 800 G6 Tower PSU	1
+Cooling	HP OEM case fan	1
+Unverified information
+The following information could not be verified through software and requires a physical inspection of the PC:
+
+RTX 3070 board manufacturer, exact board model, manufacturer part number, physical board revision, fan count, dimensions, power connectors, and cooler model.
+
+Power-supply manufacturer, HP spare number, rated wattage, efficiency rating, input voltage, connector configuration, and serial number.
+
+CPU-cooler part number, fan size, and cooling specification.
+
+Case-fan quantity, dimensions, part number, and connector type.
+
+Exact Intel Ethernet-controller model and exact Intel Wi-Fi-controller model.
+
+HP motherboard manufacturer part number. The reported motherboard model is 870C; no confirmed physical HP spare number was available.
+
+No SATA SSDs or hard drives were detected. Only the Samsung NVMe SSD was 
